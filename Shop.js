@@ -1,4 +1,5 @@
-
+var total = 0;
+var currentGold = 10000;
 
 function addToCart()
 {
@@ -17,7 +18,11 @@ function addToCart()
           cell1.innerHTML = newItem[0];
           cell2.innerHTML = newItem[1];
           cell3.innerHTML = newItem[2];
+
+          total+= parseInt(newItem[2]);
+          document.getElementById("total").innerHTML = total;
           document.getElementById('item'+i).style.backgroundColor = '';
+
         //Add item to the cart table
       }
     }
@@ -29,21 +34,26 @@ function removeFromCart()
     var numRows = document.getElementById("cart").rows.length
     for(var i = 0; i < numRows; i++)
     {
-      if (document.getElementById('item'+i).style.backgroundColor === 'yellow')
-      {
-          ocument.getElementById("cart").deleteRow(i);
-
-        //Add item to the cart table
-      }
+      document.getElementById("cart").deleteRow(0);
+      total = 0;
+      document.getElementById("total").innerHTML = total;
     }
 }
 
-
-function highlight(item)
+function buy()
 {
-  if(item.style.background == "") {
-      $(item).css('background', 'yellow');
-  }
-  else {
-      $(item).css('background', '');
-}}
+  document.getElementById("currentGold").innerHTML = currentGold - total;
+  removeFromCart();
+
+}
+
+$(document).ready(function () {
+    $('tr').click(function () {
+      if(this.style.background == "") {
+          $(this).css('background', 'yellow');
+      }
+      else {
+          $(this).css('background', '');
+        }
+    });
+});
