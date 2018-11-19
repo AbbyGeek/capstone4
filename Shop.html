@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Shop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src =Shop.js> </script>
+
+    <title>Legend Of Dragoon Shop</title>
+  </head>
+
+  <body class = background>
+<div class = itemList>
+  <table id = "listOfItems">
+    <tr id = 'item0' class = 'item'  onclick=highlight(item0)>
+      <td id=itemImage><img src=ShopImages/Potion.jpg class = itemImage></td>
+      <td class = itemName id = itemName>Healing Potion</td>
+      <td class = itemPrice id = itemPrice>10</td>
+    </tr>
+    <tr id = item1 class = 'item' >
+      <td id=itemImage><img src=ShopImages/Armor.jpg class = itemImage></td>
+      <td class = itemName id = itemName>Saint Armor</td>
+      <td class = itemPrice id = itemPrice>300</td>
+    </tr>
+    <tr id = item2 class = 'item'  >
+      <td id=itemImage><img src=ShopImages/Armor.jpg class = itemImage></td>
+      <td class = itemName id = itemName>Master's Vest</td>
+      <td class = itemPrice id = itemPrice>250</td>
+    </tr>
+    <tr id = item3 class = 'item'  >
+      <td id=itemImage><img src=ShopImages/Armor.jpg class = itemImage></td>
+      <td class = itemName id = itemName>Sparkle Dress</td>
+      <td class = itemPrice id = itemPrice>200</td>
+    </tr>
+    <tr id = item4 class = 'item'  >
+      <td id=itemImage><img src=ShopImages/Boots.jpg class = itemImage></td>
+      <td class = itemName id = itemName>Iron Kneepiece</td>
+      <td class = itemPrice id = itemPrice>100</td>
+    </tr>
+    <tr id = item5 class = 'item'  >
+      <td id=itemImage><img src=ShopImages/Boots.jpg class = itemImage></td>
+      <td class = itemName id = itemName>Stardust Boots</td>
+      <td class = itemPrice id = itemPrice>150</td>
+    </tr>
+    <tr id = item6 class = 'item'  >
+      <td id=itemImage><img src=ShopImages/Helm.png class = itemImage></td>
+      <td class = itemName id = itemName>Giganto Helm</td>
+      <td class = itemPrice id = itemPrice>200</td>
+    </tr>
+    <tr id = item7 class = 'item'  >
+      <td id=itemImage><img src=ShopImages/Helm.png class = itemImage></td>
+      <td class = itemName id = itemName>Jeweled Crown</td>
+      <td class = 'itemPrice' id = itemPrice>200</td>
+    </tr>
+    <tr id = item8 class = 'item'  >
+      <td id=itemImage><img src=ShopImages/Weapon.png class = itemImage></td>
+      <td class = itemName id = itemName>Dancing Dagger</td>
+      <td class = itemPrice id = itemPrice>300</td>
+    </tr>
+    <tr id = item9 class = 'item'  >
+      <td id=itemImage><img src=ShopImages/Weapon.png class = itemImage></td>
+      <td class = itemName id = itemName>Beast Fang</td>
+      <td class = itemPrice id = itemPrice>250</td>
+    </tr>
+    <tr id = item10 class = 'item'  >
+      <td id=itemImage><img src=ShopImages/Weapon.png class = itemImage></td>
+      <td class = itemName id = itemName>Spear Of Terror</td>
+      <td class = itemPrice id = itemPrice>300</td>
+    </tr>
+  </table>
+</div>
+
+
+    <div class = functionList>
+      <button type="button" name="add" onclick="addToCart()">Add</button>
+      <button type="button" name="remove" onclick="removeFromCart()">Remove</button>
+      <button type="button" name="buy">Buy</button>
+    </div>
+
+
+
+<div class="cart">
+  <table id = cart>
+
+  </table>
+</div>
+
+  </body>
+</html>
